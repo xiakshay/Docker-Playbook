@@ -1,0 +1,15 @@
+services:
+  website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: oracle-counter-website
+    ports:
+      - "3000:3000"
+    networks:
+      - counter-network
+    restart: unless-stopped
+
+networks:
+  counter-network:
+    external: true

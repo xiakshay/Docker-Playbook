@@ -1,0 +1,21 @@
+services:
+  oracle-db:
+    build: .
+    container_name: oracle-counter-db
+    ports:
+      - "1521:1521"
+    environment:
+      ORACLE_PASSWORD: "AdminPass123"
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+    restart: unless-stopped
+    networks:
+      - counter-network
+
+volumes:
+  oracle-data:
+
+
+networks:
+  counter-network:
+    external: true

@@ -26,3 +26,16 @@ docker compose build --no-cache jenkins
 docker compose up -d
 
 ```
+
+
+
+
+```
+exec was not working then 
+> docker exec -u root jenkins sh -c "apt-get update && apt-get install -y docker-cli"
+```
+```
+docker exec jenkins docker --version
+docker exec jenkins docker version
+```
+try upper one to validate 

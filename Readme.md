@@ -12,3 +12,17 @@ docker exec -it oracle-counter-db sqlplus counter_app/"CounterPass123"@//localho
 
 
 
+
+
+```
+change the path for others
+
+cd C:\Users\aksha\OneDrive\Desktop\Docker\project2\jenkins  
+
+docker compose down
+
+docker compose build --no-cache jenkins
+
+docker compose up -d
+
+```
